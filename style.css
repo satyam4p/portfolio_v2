@@ -1,0 +1,42 @@
+.box1{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./image/back.jpg");
+    padding: 0px;
+    margin: 0px;
+}
+
+.box2 {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./image/back4@2x.png");
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: xx-large;
+}
+
+.introduction {
+    position: absolute;
+    left: 10px;
+    top: 20px;
+}
+
+.content {
+    left: 10px;
+    top: 20px;
+}
+
+
+
