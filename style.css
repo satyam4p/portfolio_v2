@@ -76,8 +76,63 @@ a {
 .projects_content {
     display: flex;
     width: 100%;
-    background-color: aqua;
-    padding-left: 5%;
+    height: 75%;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 5%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.project_card {
+    width: 20%;
+    height: 60%;
+    border-radius: 5%;
+    background-color: aquamarine;
+    box-shadow: 5px 5px #cfc9c9bb;
+}
+.burgerIcon {
+    display: none;
+  
+}
+.burger_line {
+    display: none;
+    
+}
+.burgerHolder {
+    display: none;
+    margin-right: 5%;
+}
+
+
+@media (max-width:700px){
+    .nav_links{
+        display: none;
+    }
+    .burgerHolder {
+        display: block;
+        margin-right: 10%;
+        display: flex;
+        width: 10%;
+        height: 80%;
+        background-color: transparent;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .burgerIcon {
+        display: block;
+        display: flex;
+        width: 80%;
+        height: 70%;
+        background-color:transparent;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .burger_line {
+        display: block;
+        width: 100%;
+        height: 8%;
+        background-color: white;
+    }
 }
 
 
