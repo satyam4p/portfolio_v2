@@ -33,3 +33,8 @@ section1.addEventListener('click',function(){
 section2.addEventListener('click',function(){
     smoothScroll('.section1',1000);
 });
+
+var burgerIcon = document.querySelector(".burgerIcon");
+burgerIcon.addEventListener('click',function(){
+    
+})
