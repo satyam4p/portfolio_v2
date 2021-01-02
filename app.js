@@ -1,3 +1,36 @@
+
+// Scroll logic
+
+const body = document.body;
+console.log(body);
+const scroll = document.querySelector(".scroller");
+const scrollIcon = document.querySelector(".scrollIcon");
+const scrollUp = "scroll-up";
+const scrollDown = "scroll-down";
+
+let lastScroll = 0;
+
+window.addEventListener("scroll",() => {
+    let currentScroll = window.pageYOffset;
+    console.log("current page YOffset value:: ",lastScroll);
+     if (currentScroll <= 0) {
+    body.classList.remove(scrollUp);
+    return;
+    }
+
+    if(currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
+        //down
+        body.classList.remove(scrollUp);
+        body.classList.add(scrollDown);
+    }
+    else if (currentScroll < lastScroll && body.classList.contains(scrollDown)){
+        //up
+        body.classList.remove(scrollDown);
+        body.classList.add(scrollUp);
+    }
+    lastScroll = currentScroll;
+})
+
 function smoothScroll(target,duration){
     var trgt = document.querySelector(target);
     var targetPosition = trgt.getBoundingClientRect().top;
@@ -26,7 +59,7 @@ function smoothScroll(target,duration){
  
  var section1 = document.querySelector('.section1');
 section1.addEventListener('click',function(){
-    smoothScroll('.section2',1000);
+    smoothScroll('.projects',1000);
 });
 
  var section2 = document.querySelector('.section2');
@@ -38,3 +71,6 @@ var burgerIcon = document.querySelector(".burgerIcon");
 burgerIcon.addEventListener('click',function(){
     
 })
+
+
+

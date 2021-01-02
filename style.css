@@ -63,6 +63,7 @@ body{
     margin: 0px;
     position: absolute;
     flex-direction: column;
+
 }
 a {
     font-family: 'JetBrains Mono', monospace;
@@ -198,15 +199,27 @@ a {
     width: 98%;
     height: 30px;
     top: 0px;
+    display: none;
     position: sticky;
     display: flex;
     flex-direction: row;
     justify-content: right;
     z-index: 300;
+    transition: transform 0.4s;
 }
 .spacer {
     flex: 1;
 }
+.scroollIcon {
+    transition: transform 0.4s;
+    display: none;
+}
+
+.scroll-up .scroollIcon{
+    transform: translate(0, -100%,0);
+    display: block;
+}
+
 
 
 
