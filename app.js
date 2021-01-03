@@ -59,12 +59,12 @@ function smoothScroll(target,duration){
  
  var section1 = document.querySelector('.section1');
 section1.addEventListener('click',function(){
-    smoothScroll('.projects',1000);
+    smoothScroll('.projects',900);
 });
 
  var section2 = document.querySelector('.section2');
 section2.addEventListener('click',function(){
-    smoothScroll('.section1',1000);
+    smoothScroll('.section1',900);
 });
 var resume = document.querySelector(".Resume");
 resume.addEventListener("click",function(){
