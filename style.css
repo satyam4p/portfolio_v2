@@ -227,36 +227,6 @@ a {
     background-color: aquamarine;
     border: 2px solid black;
 }
-@media (max-width:700px){
-    .nav_links{
-        display: none;
-    }
-    .burgerHolder {
-        display: block;
-        margin-right: 6%;
-        display: flex;
-        width: 10%;
-        height: 80%;
-        background-color: transparent;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .burgerIcon {
-        display: block;
-        display: flex;
-        width: 80%;
-        height: 70%;
-        background-color:transparent;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-    .burger_line {
-        display: block;
-        width: 100%;
-        height: 8%;
-        background-color: white;
-    }
-}
 
 .box3 {
     height: 100vh;
@@ -308,5 +278,72 @@ a {
 }
 
 
+@media (max-width:700px){
+    .nav_links{
+        display: none;
+    }
+    .burgerHolder {
+        display: block;
+        margin-right: 6%;
+        display: flex;
+        width: 10%;
+        height: 80%;
+        background-color: transparent;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .burgerIcon {
+        display: block;
+        display: flex;
+        width: 80%;
+        height: 70%;
+        background-color:transparent;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .burger_line {
+        display: block;
+        width: 100%;
+        height: 8%;
+        background-color: white;
+    }
+    .spaceDiv {
+        display: none;
+    }
+    .about_intro_div {
+        display: flex;
+        width: 60%;
+        height: 100vh;
+        padding-top: 5%;
+        flex: 1;
+        padding-left: 10%;
+        }
+    .intro {
+        display: flex;
+        width: 100%;
+        height: 13%;
+        justify-content: center;
+        align-items: center;
+    }
+    .preTyped {
+        font-family: 'JetBrains Mono', monospace;
+        position: relative;
+        font-size: xx-large;
+    }
+    .typing {
+        font-family: 'JetBrains Mono', monospace;
+        position: relative;
+        color: blue;
+        font-size: xx-large;
+    }
+    .typing::after{
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 90%;
+        border-right: 2px solid black;
+        animation: blink 0.5s infinite ease;
+    }
+}
 
 
