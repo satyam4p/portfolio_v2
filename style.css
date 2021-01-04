@@ -3,16 +3,69 @@ body{
     padding: 0px;
     margin: 0px;
 }
+.nav_header {
+    width: 100%;
+    height: 14vh;
+    display: flex;
+}
 .box1{
     height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.03)),url('./image/pexels-publicdomainpngcom-747438.jpg');
+    background-size: cover;
     width: 100%;
     display: flex;
-    background-color:whitesmoke;
     padding: 0px;
     margin: 0px;
     flex-direction: row;
     flex-wrap: wrap;
 }
+.spaceDiv{
+    width: 40%;
+    height: 100vh;
+    /* background-color: rgba(62, 78, 224, 0.555); */
+}
+.about_intro_div {
+    display: flex;
+    width: 60%;
+    height: 100vh;
+    /* background-color: rgba(134, 140, 163, 0.438); */
+    padding-top: 10%;
+    flex: 1;
+}
+.intro {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    
+}
+.preTyped {
+    font-family: 'JetBrains Mono', monospace;
+    position: relative;
+    font-size: xx-large;
+}
+.typing {
+    font-family: 'JetBrains Mono', monospace;
+    position: relative;
+    color: blue;
+    font-size: xx-large;
+}
+.typing::after{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 90%;
+    border-right: 2px solid black;
+    animation: blink 0.5s infinite ease;
+}
+@keyframes blink{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
 .logo {
     padding-left: 5%;
     font-family: 'poppins';
@@ -23,10 +76,10 @@ body{
 }
 .header {
     width: 100%;
-    height: 15%;
+    height: inherit;
     display: flex;
     flex-direction: row;
-    background-color: rgba(82, 94, 255, 0.89);
+    background-color:rgba(36, 55, 231, 0.555);
     justify-content: space-between;
 }
 .navbar {
@@ -52,8 +105,6 @@ body{
     list-style: none;
 
 }
-
-
 .box2 {
     display: flex;
     align-items: center;
@@ -162,7 +213,6 @@ a {
     margin-right: 5px;
 }
 
-
 .about-content {
     height: 700px;
     width: 900px;
@@ -177,7 +227,6 @@ a {
     background-color: aquamarine;
     border: 2px solid black;
 }
-
 @media (max-width:700px){
     .nav_links{
         display: none;
@@ -207,7 +256,6 @@ a {
         height: 8%;
         background-color: white;
     }
-    
 }
 
 .box3 {
@@ -219,18 +267,26 @@ a {
     padding: 0px;
     margin: 0px;
     position: absolute;
-    flex-direction: column;
+    flex-direction: row;
     background-color:whitesmoke;
 }
+.resume {
+    width: 95%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .scroller {
-    width: 98%;
-    height: 30px;
+    width: 5%;
+    height: 100vh;
     top: 0px;
-    display: none;
+    display: flex;
     position: sticky;
     display: flex;
     flex-direction: row;
-    justify-content: right;
+    justify-content: center;
+    align-items: center;
     z-index: 300;
     transition: transform 0.4s;
 }

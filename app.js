@@ -1,5 +1,33 @@
 
-// Scroll logic
+
+/*typewriting effect logic --START */
+function typewriting(){
+    const texts = ['Learn.','Practice.','Create.'];
+let count = 0;
+let index = 0;
+let currentText = '';
+let letter = '';
+
+(function type(){
+
+    if(count === texts.length){
+        count = 0;
+    }
+    currentText = texts[count];
+    letter = currentText.slice(0,++index);
+
+    document.querySelector(".typing").textContent = letter;
+    if(letter.length === currentText.length){
+        count++;
+        index = 0;
+    }
+    setTimeout(type, 300);
+}());
+}
+typewriting();
+
+/*typewriting logic --END */
+/* scroll to top logic --START*/
 
 const body = document.body;
 console.log(body);
@@ -30,7 +58,9 @@ window.addEventListener("scroll",() => {
     }
     lastScroll = currentScroll;
 })
+/* scroll to top logic --END*/
 
+/*smooth scroll logic --START*/
 function smoothScroll(target,duration){
     var trgt = document.querySelector(target);
     var targetPosition = trgt.getBoundingClientRect().top;
@@ -70,6 +100,7 @@ var resume = document.querySelector(".Resume");
 resume.addEventListener("click",function(){
     smoothScroll('.section3',800);
 })
+/*smooth scroll logic --END*/
 
 var burgerIcon = document.querySelector(".burgerIcon");
 burgerIcon.addEventListener('click',function(){
