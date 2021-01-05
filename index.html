@@ -142,16 +142,15 @@
                 </div>
             </div>
             <div class="box3 section3">
-                <div class="resume-headers">
-                    <div class="headers">
-                        <!-- <p class="header-text">Experience</p> -->
+                <div class="pdf-viewer">
+                    <h2> work in progress..</h2>
+                    <div class="pdf-topBar">
+                    <button class="btn" id="prev-page">Prev Page<i class="fa fa-reply" style="font-size:24px"></i></button>
+                    <button class="btn" id="next-page">Next Page<i class="fa fa-share" style="font-size:24px"></i></button>
+                    <span class="page-info"></span>
+                    Page <span id="page-num"></span> of <span id="page-count"></span>
                     </div>
-                </div>
-                <div class="resume-content">
-                    <div class="content">
-                        <!-- <p class="content-text">Bridge Solutions Group</p>
-                        <p class="content-text">Software Engineer</p> -->
-                    </div>
+                    <canvas id="pdf-render"></canvas>
                 </div>
                 <div class="scroller">
                     <div class="spacer"></div>
@@ -160,7 +159,7 @@
                     </div>
                 </div>
             </div>
-                            
+        <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>           
         <script src="./app.js"></script>
     </body>
 </html>

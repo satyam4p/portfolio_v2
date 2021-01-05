@@ -240,9 +240,10 @@ a {
     padding: 0px;
     margin: 0px;
     position: absolute;
-    /* flex-direction: row; */
+    flex-direction: row;
     background-color:whitesmoke;
     overflow-x: hidden;
+    /* overflow-y:hidden ; */
 }
 .resume-headers {
     width: 25%;
@@ -302,6 +303,14 @@ a {
     font-size: large;
     font-family: "poppins";
 } 
+.pdf-viewer {
+    width: 90%;
+    margin-left: 5%;
+    background-color: rgba(36, 55, 231, 0.555);
+    display: flex;
+    flex-direction: row;
+}
+
 /* 
 .container-left::after{
     position: absolute;

@@ -1,4 +1,86 @@
 
+const url = "./Resume.pdf";
+
+let pdfDoc = null,
+    pageNum = 1,
+    pageIsRendering = false,
+    pageNumIsPending = null;
+
+const scale = 0.8,
+    canvas =document.querySelector('#pdf-render'),
+    ctx = canvas.getContext('2d');
+
+// Render the page
+
+const renderPage = num =>{
+    pageIsRendering = true;
+
+    //get page
+    pdfDoc.getPage(num).then(page => {
+        // console.log(page);
+        //set scale
+        const viewport = page.getViewport({scale});
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+        const renderCtx = {
+            canvasContext:ctx,
+            viewport
+        }
+
+        page.render(renderCtx).promise.then(()=>{
+            pageIsRendering = false;
+            if(pageNumIsPending !== null){
+                renderPage(pageNumIsPending);
+                pageNumIsPending = null;
+            }
+        });
+        //output current page
+        document.querySelector('#page-num').textContent = num;
+    });
+}
+//check for pages rendering
+const queueRenderPage = num =>{
+    if(pageIsRendering){
+        pageNumIsRendering = num;
+
+    }
+    else{
+        renderPage(num);
+    }
+}
+//show prev page
+const showPreviousPage =()=>{
+    if(pageNum <= 1){
+        return;
+    }
+    pageNum--;
+    queueRenderPage(pageNum);
+}
+//show next page
+const showNextPage =()=>{
+    if(pageNum >= pdfDoc.numPage){
+        return;
+    }
+    pageNum++;
+    queueRenderPage(pageNum);
+}
+//get document
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+
+// The workerSrc property shall be specified.
+pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
+
+pdfjsLib.getDocument(url).promise.then(pdfDoc_ =>{
+    pdfDoc = pdfDoc_;
+    // console.log(pdfDoc);
+    document.querySelector('#page-count').textContent = pdfDoc.numPages;
+    
+    renderPage(pageNum)
+
+});
+//button events
+document.querySelector('#prev-page').addEventListener("click",showPreviousPage);
+document.querySelector('#next-page').addEventListener("click",showNextPage);
 
 /*typewriting effect logic --START */
 function typewriting(){
