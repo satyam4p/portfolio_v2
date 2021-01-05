@@ -58,7 +58,7 @@ const showPreviousPage =()=>{
 }
 //show next page
 const showNextPage =()=>{
-    if(pageNum >= pdfDoc.numPage){
+    if(pageNum >= pdfDoc.numPages){
         return;
     }
     pageNum++;
