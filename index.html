@@ -143,21 +143,23 @@
             </div>
             <div class="box3 section3">
                 <div class="pdf-viewer">
-                    <h2> work in progress..</h2>
                     <div class="pdf-topBar">
-                    <button class="btn" id="prev-page">Prev Page<i class="fa fa-reply" style="font-size:24px"></i></button>
-                    <button class="btn" id="next-page">Next Page<i class="fa fa-share" style="font-size:24px"></i></button>
-                    <span class="page-info"></span>
-                    Page <span id="page-num"></span> of <span id="page-count"></span>
+                    <button class="btn" id="prev-page">Prev Page<i class="fa fa-reply" style="font-size:24px"></i></button>&nbsp;
+                    <button class="btn" id="next-page">Next Page<i class="fa fa-share" style="font-size:24px"></i></button>&nbsp;&nbsp;
+                    <span class="page-info">Page</span>&nbsp;
+                     <span id="page-num"></span>&nbsp; of &nbsp;<span id="page-count"></span>
                     </div>
-                    <canvas id="pdf-render"></canvas>
-                </div>
-                <div class="scroller">
-                    <div class="spacer"></div>
-                    <div class="scroollIcon">
-                        <i class="fa fa-caret-square-o-up section2" style="font-size:36px"></i>
+                    <div class="canvas-container">
+                    <canvas class="pdf-canvas" id="pdf-render"></canvas>
+                    </div>
+                    <div class="scroller">
+                        <div class="spacer"></div>
+                        <div class="scroollIcon">
+                            <i class="fa fa-caret-square-o-up section2" style="font-size:36px"></i>
+                        </div>
                     </div>
                 </div>
+                
             </div>
         <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>           
         <script src="./app.js"></script>
