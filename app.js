@@ -1,86 +1,86 @@
 
-const url = "./Resume.pdf";
+// const url = "./Resume.pdf";
 
-let pdfDoc = null,
-    pageNum = 1,
-    pageIsRendering = false,
-    pageNumIsPending = null;
+// let pdfDoc = null,
+//     pageNum = 1,
+//     pageIsRendering = false,
+//     pageNumIsPending = null;
 
-const scale = 0.9,
-    canvas =document.querySelector('#pdf-render'),
-    ctx = canvas.getContext('2d');
+// const scale = 0.9,
+//     canvas =document.querySelector('#pdf-render'),
+//     ctx = canvas.getContext('2d');
 
-// Render the page
+// // Render the page
 
-const renderPage = num =>{
-    pageIsRendering = true;
+// const renderPage = num =>{
+//     pageIsRendering = true;
 
-    //get page
-    pdfDoc.getPage(num).then(page => {
-        // console.log(page);
-        //set scale
-        const viewport = page.getViewport({scale});
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
-        const renderCtx = {
-            canvasContext:ctx,
-            viewport
-        }
+//     //get page
+//     pdfDoc.getPage(num).then(page => {
+//         // console.log(page);
+//         //set scale
+//         const viewport = page.getViewport({scale});
+//         canvas.height = viewport.height;
+//         canvas.width = viewport.width;
+//         const renderCtx = {
+//             canvasContext:ctx,
+//             viewport
+//         }
 
-        page.render(renderCtx).promise.then(()=>{
-            pageIsRendering = false;
-            if(pageNumIsPending !== null){
-                renderPage(pageNumIsPending);
-                pageNumIsPending = null;
-            }
-        });
-        //output current page
-        document.querySelector('#page-num').textContent = num;
-    });
-}
-//check for pages rendering
-const queueRenderPage = num =>{
-    if(pageIsRendering){
-        pageNumIsRendering = num;
+//         page.render(renderCtx).promise.then(()=>{
+//             pageIsRendering = false;
+//             if(pageNumIsPending !== null){
+//                 renderPage(pageNumIsPending);
+//                 pageNumIsPending = null;
+//             }
+//         });
+//         //output current page
+//         document.querySelector('#page-num').textContent = num;
+//     });
+// }
+// //check for pages rendering
+// const queueRenderPage = num =>{
+//     if(pageIsRendering){
+//         pageNumIsRendering = num;
 
-    }
-    else{
-        renderPage(num);
-    }
-}
-//show prev page
-const showPreviousPage =()=>{
-    if(pageNum <= 1){
-        return;
-    }
-    pageNum--;
-    queueRenderPage(pageNum);
-}
-//show next page
-const showNextPage =()=>{
-    if(pageNum >= pdfDoc.numPages){
-        return;
-    }
-    pageNum++;
-    queueRenderPage(pageNum);
-}
-//get document
-var pdfjsLib = window['pdfjs-dist/build/pdf'];
+//     }
+//     else{
+//         renderPage(num);
+//     }
+// }
+// //show prev page
+// const showPreviousPage =()=>{
+//     if(pageNum <= 1){
+//         return;
+//     }
+//     pageNum--;
+//     queueRenderPage(pageNum);
+// }
+// //show next page
+// const showNextPage =()=>{
+//     if(pageNum >= pdfDoc.numPages){
+//         return;
+//     }
+//     pageNum++;
+//     queueRenderPage(pageNum);
+// }
+// //get document
+// var pdfjsLib = window['pdfjs-dist/build/pdf'];
 
-// The workerSrc property shall be specified.
-pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
+// // The workerSrc property shall be specified.
+// pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
 
-pdfjsLib.getDocument(url).promise.then(pdfDoc_ =>{
-    pdfDoc = pdfDoc_;
-    // console.log(pdfDoc);
-    document.querySelector('#page-count').textContent = pdfDoc.numPages;
+// pdfjsLib.getDocument(url).promise.then(pdfDoc_ =>{
+//     pdfDoc = pdfDoc_;
+//     // console.log(pdfDoc);
+//     document.querySelector('#page-count').textContent = pdfDoc.numPages;
     
-    renderPage(pageNum)
+//     renderPage(pageNum)
 
-});
-//button events
-document.querySelector('#prev-page').addEventListener("click",showPreviousPage);
-document.querySelector('#next-page').addEventListener("click",showNextPage);
+// });
+// //button events
+// document.querySelector('#prev-page').addEventListener("click",showPreviousPage);
+// document.querySelector('#next-page').addEventListener("click",showNextPage);
 
 /*typewriting effect logic --START */
 function typewriting(){
@@ -173,20 +173,18 @@ function smoothScroll(target,duration){
 section1.addEventListener('click',function(){
     smoothScroll('.projects',900);
 });
-
- var section2 = document.querySelector('.section2');
-section2.addEventListener('click',function(){
-    smoothScroll('.section1',900);
-});
-var resume = document.querySelector(".Resume");
-resume.addEventListener("click",function(){
-    smoothScroll('.section3',800);
-})
+ var aboutLink = document.querySelector('.aboutLink');
+ aboutLink.addEventListener('click',function(){
+     console.log("about lnk clicked");
+     smoothScroll('.about',900);
+ })
 /*smooth scroll logic --END*/
 
 var burgerIcon = document.querySelector(".burgerIcon");
+// var overlay = document.querySelector(".overlay");
 burgerIcon.addEventListener('click',function(){
-    
+    body.classList.toggle("overlay");
+    body.classList.toggle("active");
 })
 
 
