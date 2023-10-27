@@ -4,6 +4,7 @@
     --primary: #000000;
     --secondary: #ffffff;
     --transparent: transparent;
+    --transparent_background: #19324b72;
     --dark_gray: #A9A9A9;
     --dull_gray: #D0D0D0;
     --anchor:#11C8A2;
@@ -186,6 +187,12 @@ a:hover{
     display: grid;
     grid-template-columns: 0.5fr 1fr;
     gap: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    transition: all 100ms ease-in-out;
+}
+.experience-list:hover{
+    background: var(--transparent_background);
 }
 .experience-header{
     font-size: var(--typography_text);
@@ -197,6 +204,10 @@ a:hover{
 }
 .current-role{
     font-size: large;
+    color: var(--gray);
+    transition: all 200ms ease-in-out;
+}
+.active-role{
     color: var(--anchor);
 }
 .sub-role{

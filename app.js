@@ -24,4 +24,16 @@ for(let item of navElemnts){
         childSpan.classList.remove("span-grow")
     })
 }
+let experienceCards = document.getElementsByClassName("experience-list");
+for(let card of experienceCards){
+    card.addEventListener('mouseover',(e)=>{
+        let currentRoleEle = card.querySelector('.current-role')
+        currentRoleEle.classList.add('active-role')
+    })
+    card.addEventListener('mouseout',(e)=>{
+        let currentRoleEle = card.querySelector('.current-role')
+        currentRoleEle.classList.remove('active-role')
+    })
+}
+// let currentRole = experienceCard.getElementsByClassName("current-role");
 
