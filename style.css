@@ -6,7 +6,9 @@
     --transparent: transparent;
     --dark_gray: #A9A9A9;
     --dull_gray: #D0D0D0;
-    --anchor:#41CA75;
+    --anchor:#11C8A2;
+    --anchor_dark: #10a1901e;
+    --typography_text: 0.9rem;
 }
 
 body{
@@ -14,6 +16,8 @@ body{
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: #001C38;
     color: var(--gray);
+    margin: 0;
+    padding: 0;
 }
 a{
     text-decoration: none;
@@ -24,6 +28,7 @@ main{
     flex-direction: row;
     padding-left: 12em;
     padding-right: 12em;
+    gap: 1rem;
 }
 .nav-link{
     padding: 1em;
@@ -74,12 +79,16 @@ nav{
     width: 50%;
     position: sticky;
     top: 0;
-    max-height: 90vh;
+    height: 80vh;
 }
 .main-content{
     padding-top: 4rem;
     padding-bottom: 6rem;
     width: 50%;
+}
+.about{
+    margin-bottom: 6rem;
+    line-height: 1.5rem;
 }
 h1{
     padding: 0px;
@@ -100,12 +109,11 @@ h1{
 }
 
 .self-intro{
-    line-height: 1.5rem;
     color: var(--dark_gray);
 }
 p{
     color: var(--dark_gray);
-    font-size: medium;
+    font-size: var(--typography_text)
 }
 a{
     color: var(--gray);
@@ -119,14 +127,15 @@ a:hover{
     display: grid;
     grid-template-columns: 10rem 10rem;
     padding: 0px;
+    font-size: var(--typography_text);
 }
-li{
+.technologies-list li{
     position: relative;
     padding-left: 1rem;
     margin-bottom: 1rem;
     color: var(--dark_gray);
 }
-li::before{
+.technologies-list li::before{
     content: "▹";
     position: absolute;
     left: 0;
@@ -163,4 +172,53 @@ li::before{
 .span-grow{
     padding-right: 3rem;
     color: var(--gray);
+}
+
+.experience-ordered-list{
+    list-style: none;
+    padding: 0;
+}
+.experience-ordered-list li{
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+}
+.experience-list{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    gap: 1rem;
+}
+.experience-header{
+    font-size: var(--typography_text);
+    color: var(--dark_gray);
+}
+.experience-content h3{
+    margin: 0;
+    line-height: 1.3em;
+}
+.current-role{
+    font-size: large;
+    color: var(--anchor);
+}
+.sub-role{
+    font-size: medium;
+    color: var(--dark_gray);
+}
+.tech-stack{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    font-size: small;
+    color: var(--anchor);
+    gap: 0.3rem;;
+}
+.tech-stack li{
+    padding: 0.2rem 0.4rem;
+    background: var(--anchor_dark);
+    border-radius: 20px;
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+}
+.tech-stack li > div{
+    padding: 0;
 }
