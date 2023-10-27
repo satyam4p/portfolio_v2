@@ -1,207 +1,70 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            Satyam Kumar
+        </title>
         <link rel="stylesheet" href="./style.css">
+        <script defer src="./app.js"></script>
     </head>
     <body>
-    <nav class="navbar">
-        <div class="logo">
-            <h2>SatyamKumar</h2>
-        </div>
-        <div class="spacer"></div>
-        <div class="burgerIcon">
-            <div class="burger_line"></div>
-            <div class="burger_line"></div>
-            <div class="burger_line"></div>
-        </div>
-        <ul class="nav_links">
-            <li>
-                <a class = "aboutLink" href="#">About </a>
-            </li>
-            <li>
-                <a class="section1" href="#">Projects</a>
-            </li>
-            <li>
-                <a class="Resume" href="./Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a> 
-            </li>
-        </ul>
-    </nav>               
-        <div class="box1">
-                <div class="spaceDiv">
-                </div> 
-                <div class="about_intro_div">
-                    <div class="intro">
-                        <p class="typing"></p> 
-                    </div>
+        <main> 
+            <section class="header">
+                <div>
+                    <h1 class="header-title">
+                        <a>Satyam Kumar</a>
+                    </h1>
+                    <section class="current-pos">
+                        <h3>Product Engineer at Sage Software</h3>
+                        <p class="phrase">I build responsive, accessible and interesting web applications.</p>
+                    </section>
+                    <section class="nav">
+                        <a id="about" class="nav-list">
+                            <span class="nav-indicator"></span>
+                            <span class="nav-list-text">About</span>
+                        </a>
+                        <a id="experience" class="nav-list">
+                            <span class="nav-indicator"></span>
+                            <span class="nav-list-text">Experience</span>
+                        </a>
+                        <a id="projects" class="nav-list">
+                            <span class="nav-indicator"></span>
+                            <span class="nav-list-text">Projects</span>
+                        </a>
+                    </section>
                 </div>
-            </div>
-            <div class="about">
-                <div class="aboutPage">
-                    <div class="aboutContentLeft">
-                        <div class="introduction">
-                            <p>I'm Satyam and I work as Software Engineer in Bangalore, India. I love to create new projects and web applications.
-                                Below are few projects that I have done. Currently looking for new opportunities in software dev and front end development field.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="aboutContentRight">
-                        <div class="image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="box2">
-                <div class="projects_content projects">
-                    <div class="project_div">
-                        <div class="project_card">
-                            <div class="project_title_div">
-                                <p class="project_title">Taskboard</p>
-                            </div>
-                            <div class="project_body">
-                                <div class="project_body_content">
-                                    <p class="project-intro">
-                                        Taskboard is a simlpe web app for users to keep track of their tasks. User can colaborate with others.
-                                    </p>
-                                    <div class="sourceDiv">
-                                    <a class="sourceLink" href="https://github.com/satyam4p/taskboard" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" style="font-size:28px"></i> Source Code</a>
-                                    </div>
-                                    <br/>
-                                    <div class="projectLink">
-                                        <a class="sortAlgoDashboard" href="https://orgtaskboard.netlify.app/" target="_blank" rel="noopener noreferrer">View Project</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project_card">
-                            <div class="project_title_div">
-                                <p class="project_title">Website UI design</p>
-                            </div>
-                            <div class="project_body">
-                                <div class="project_body_content">
-                                    <p class="project-intro">
-                                        A responsive website design using HTML5, CSS3 and javascript.Website is sample design for making seamless mobile responsive ui for websites.
-                                    </p>
-                                    <div class="sourceDiv">
-                                    <a class="sourceLink" href="https://github.com/satyam4p/Website-UI-Design" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" style="font-size:28px"></i> Source Code</a>
-                                    </div>
-                                    <br/>
-                                    <div class="projectLink">
-                                        <a class="sortAlgoDashboard" href="https://websiteuidesign.netlify.app/" target="_blank" rel="noopener noreferrer">View Project</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project_card">
-                            <div class="project_title_div">
-                                <p class="project_title">Quickly-Chat</p>
-                            </div>
-                            <div class="project_body">
-                                <div class="project_body_content">
-                                    <p class="project-intro">
-                                        An online Chat application where randome users can join/create romms to exchange messages and share their currentlocation. This app was built using nodeJS as backend with socketio for communication and connection servers.
-                                    </p>
-                                    <div class="sourceDiv">
-                                    <a class="sourceLink" href="https://github.com/satyam4p/Twitter_Clone" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" style="font-size:28px"></i> Source Code</a>
-                                    </div>
-                                    <br/>
-                                    <div class="projectLink">
-                                        <a class="sortAlgoDashboard" href="https://quickly-chat.herokuapp.com/" target="_blank" rel="noopener noreferrer">View Project</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  
-                        <div class="project_card">
-                            <div class="project_title_div">
-                                <p class="project_title">Keep Notes Clone</p>
-                            </div>
-                            <div class="project_body">
-                                <div class="project_body_content">
-                                    <p class="project-intro">
-                                        A google Kepp clone with vanilla Javascript, HTML,CSS3. Notes can be created, Updated and deleted. The colors can also be added to each note.
-                                    </p>
-                                    <div class="sourceDiv">
-                                        <a class="sourceLink" href="https://github.com/satyam4p/keep-notes" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" style="font-size:28px"></i> Source Code</a>
-                                    </div>
-                                    <br/>
-                                    <div class="projectLink">
-                                        <a class="sortAlgoDashboard" href="https://custom-keep-notes.netlify.app/" target="_blank" rel="noopener noreferrer">View Project</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project_card">
-                            <div class="project_title_div">
-                                <p class="project_title">Personal Shpper</p>
-                            </div>
-                            <div class="project_body">
-                                <div class="project_body_content">
-                                    <p class="project-intro">
-                                        Personal Shopper is a small project for e-commerce platform where a stylist can add products to cart and send those orders to other customers/members to see if they like the product or cchanges any of them.
-                                    </p>
-                                    <div class="sourceDiv">
-                                        <a class="sourceLink" href="https://github.com/satyam4p/Personal-Shopper" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" style="font-size:28px"></i> Source Code</a>
-                                    </div>
-                                    <br/>
-                                    <div class="projectLink">
-                                        <a class="sortAlgoDashboard" href="https://personalshopper.netlify.app" target="_blank" rel="noopener noreferrer">View Project</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <div class="project_card">
-                            <div class="project_title_div">
-                                <p class="project_title">AlgoDashboard</p>
-                            </div>
-                            <div class="project_body">
-                                <div class="project_body_content">
-                                    <p class="project-intro">
-                                        This project is made for visual representation of Algorithms on a dashboard with graphical representation of searching algorithms and path finding algorithms.
-                                    </p>
-                                    <br/>
-                                    <div class="sourceDiv">
-                                    <a class="sourceLink" href="https://github.com/satyam4p/dashboard-modal" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" style="font-size:28px"></i> Source Code</a>
-                                    </div>
-                                    <br/>
-                                    <div class="projectLink">
-                                        <a class="sortAlgoDashboard" href="https://sortalgodashboard.netlify.app" target="_blank" rel="noopener noreferrer">View Project</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>                                             -->
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="box3 section3">
-                <!-- <div class="pdf-viewer">
-                    <!-- <div class="pdf-topBar">
-                    <button class="btn" id="prev-page">Prev Page<i class="fa fa-reply" style="font-size:24px"></i></button>&nbsp;
-                    <button class="btn" id="next-page">Next Page<i class="fa fa-share" style="font-size:24px"></i></button>&nbsp;&nbsp;
-                    <span class="page-info">Page</span>&nbsp;
-                     <span id="page-num"></span>&nbsp; of &nbsp;<span id="page-count"></span>
-                    </div> -->
-                    <!-- <div class="canvas-container">
-                    <canvas class="pdf-canvas" id="pdf-render"></canvas>
-                    </div> -->
-                <!-- </div> -->
-                <!-- <div class="scroller">
-                    <!-- <div class="spacer"></div>
-                    <div class="scroollIcon">
-                        <i class="fa fa-caret-square-o-up section2" style="font-size:36px"></i>
-                    </div> -->
-                <!-- </div> -->
-            <!-- </div>  -->
-        <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>           
-        <script src="./app.js"></script>
+            </section>  
+            <section class="main-content">
+                <section class="about">
+                <p class="self-intro">After graduating in 2019, I joined a firm as software engineer, After going through some neiche tech, got interested in javascript ecosystem itself.
+                     Now, aiming to be more and more experienced in same field.</p>
+                <p class="dat-to-day">My main focus these days is to build products which scale and learn in the process at <a href="https://www.sage.com/en-gb/">Sage Software.</a></p>
+                <p> when i'm not working i usually try to catchup to some new technology which can be usefull in my field and dabble around with some new tech which seems interesting.
+                     Currently i'm interested with some open source projects and an active member of <a href="https://github.com/plone/volto">Volto(Plone Foundation).</a></p>
+
+                <p>Here are few technologies I have been working with recently.</p>
+                <section class="technologies">
+                    <ul>
+                        <li>JavaScript(ES6+)</li>
+                        <li>React</li>
+                        <li>NodeJS</li>
+                        <li>TypeScript</li>
+                        <li>Webpack</li>
+                        <li>Microfrontends</li>
+                    </ul>
+                </section>
+                </section>
+                <section class="experience">
+
+                </section>
+                <section class="projects">
+
+                </section>
+            </section>
+            <section>
+
+            </section>
+        </main>
+        
     </body>
 </html>
