@@ -1,15 +1,15 @@
 :root{
     --blue: #5B86D7;
-    --gray: #E5E5E5;
+    --gray: #FFFFFF;
     --primary: #000000;
     --secondary: #ffffff;
     --transparent: transparent;
     --transparent_background: #1d294183;
-    --dark_gray: #A9A9A9;
+    --dark_gray: #b6bfc7;
     --dull_gray: #D0D0D0;
     --anchor:#11C8A2;
     --anchor_dark: #10a1901e;
-    --typography_text: 0.9rem;
+    --typography_text: 1rem;
 }
 html{
     scroll-behavior: smooth;
@@ -91,7 +91,6 @@ nav{
 }
 .about{
     padding-top: 4rem;
-    margin-bottom: 6rem;
     line-height: 1.5rem;
 }
 .experience-section{
@@ -124,6 +123,7 @@ p{
 }
 a{
     color: var(--gray);
+    font-weight: 700;
 }
 a:hover{
     color: var(--anchor);
@@ -202,7 +202,7 @@ a:hover{
     cursor: pointer;
 }
 .experience-header{
-    font-size: var(--typography_text);
+    font-size: 0.8rem;
     color: var(--dark_gray);
 }
 .experience-content h3{
@@ -239,4 +239,30 @@ a:hover{
 }
 .tech-stack li > div{
     padding: 0;
+}
+
+.resume a{
+    font-weight: normal;
+    padding-bottom: 0.5rem;
+}
+.resume a:hover{
+    text-decoration: underline;
+}
+
+.projects-unordered-list{
+    list-style: none;
+    padding: 0;
+}
+
+.project-list{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    transition: all 100ms ease-in-out;
+}
+.project-list:hover{
+    background: var(--transparent_background);
+    cursor: pointer;
 }
