@@ -35,5 +35,4 @@ for(let card of experienceCards){
         currentRoleEle.classList.remove('active-role')
     })
 }
-// let currentRole = experienceCard.getElementsByClassName("current-role");
 

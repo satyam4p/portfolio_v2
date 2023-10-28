@@ -4,18 +4,21 @@
     --primary: #000000;
     --secondary: #ffffff;
     --transparent: transparent;
-    --transparent_background: #19324b72;
+    --transparent_background: #1d294183;
     --dark_gray: #A9A9A9;
     --dull_gray: #D0D0D0;
     --anchor:#11C8A2;
     --anchor_dark: #10a1901e;
     --typography_text: 0.9rem;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     all: unset;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background: #001C38;
+    background: #04122C;
     color: var(--gray);
     margin: 0;
     padding: 0;
@@ -83,13 +86,16 @@ nav{
     height: 80vh;
 }
 .main-content{
-    padding-top: 4rem;
     padding-bottom: 6rem;
     width: 50%;
 }
 .about{
+    padding-top: 4rem;
     margin-bottom: 6rem;
     line-height: 1.5rem;
+}
+.experience-section{
+    padding-top: 4rem;
 }
 h1{
     padding: 0px;
@@ -193,6 +199,7 @@ a:hover{
 }
 .experience-list:hover{
     background: var(--transparent_background);
+    cursor: pointer;
 }
 .experience-header{
     font-size: var(--typography_text);
