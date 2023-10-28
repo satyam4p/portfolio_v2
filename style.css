@@ -9,7 +9,7 @@
     --dull_gray: #D0D0D0;
     --anchor:#11C8A2;
     --anchor_dark: #10a1901e;
-    --typography_text: 1rem;
+    --typography_text: 0.9rem;
 }
 html{
     scroll-behavior: smooth;
@@ -95,6 +95,11 @@ nav{
 }
 .experience-section{
     padding-top: 4rem;
+    line-height: 1.5rem;
+}
+.projects-section{
+    padding-top: 4rem;
+    line-height: 1.5rem;
 }
 h1{
     padding: 0px;
@@ -146,7 +151,7 @@ a:hover{
     content: "▹";
     position: absolute;
     left: 0;
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     line-height: 20px;
     color: var(--anchor);
 }
@@ -184,6 +189,7 @@ a:hover{
 .experience-ordered-list{
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 .experience-ordered-list li{
     margin-bottom: 2rem;
@@ -204,10 +210,16 @@ a:hover{
 .experience-header{
     font-size: 0.8rem;
     color: var(--dark_gray);
+    font-weight: normal;
+    width: 100%;
 }
 .experience-content h3{
     margin: 0;
     line-height: 1.3em;
+}
+.experience-content p{
+    font-size: var(--typography_text);
+    font-weight: normal;
 }
 .current-role{
     font-size: large;
@@ -244,15 +256,21 @@ a:hover{
 .resume a{
     font-weight: normal;
     padding-bottom: 0.5rem;
+    transition: all 200ms ease-in-out;
 }
 .resume a:hover{
     text-decoration: underline;
+}
+.experience-header img{
+    width: 100%;
+    border-radius: 5px;
 }
 
 .projects-unordered-list{
     list-style: none;
     padding: 0;
 }
+
 
 .project-list{
     display: grid;
