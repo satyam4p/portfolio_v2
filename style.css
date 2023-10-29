@@ -57,6 +57,17 @@ nav{
     /* transition: border-bottom 300ms; */
     
 }
+p{
+    color: var(--dark_gray);
+    font-size: var(--typography_text)
+}
+a{
+    color: var(--gray);
+    font-weight: 700;
+}
+a:hover{
+    color: var(--anchor);
+}
 .nav-links-container.sticking{
     border-bottom: 1px solid var(--dark_gray);
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
@@ -125,17 +136,7 @@ h1{
 .self-intro{
     color: var(--dark_gray);
 }
-p{
-    color: var(--dark_gray);
-    font-size: var(--typography_text)
-}
-a{
-    color: var(--gray);
-    font-weight: 700;
-}
-a:hover{
-    color: var(--anchor);
-}
+
 .technologies ul{
     padding: 0px;
     list-style: none;
@@ -304,4 +305,16 @@ a:hover{
 }
 .media-icons:hover{
     fill: var(--gray);
+}
+
+.arrow-icon{
+    stroke: var(--secondary);
+    transition: all 200ms ease-in-out;
+    position: absolute;
+
+}
+.resume-link:hover .arrow-icon{
+    margin: 0rem 0rem 0rem 0.5rem;
+    stroke: var(--anchor);
+    
 }
