@@ -35,4 +35,35 @@ for(let card of experienceCards){
         currentRoleEle.classList.remove('active-role')
     })
 }
+let aboutSection = document.querySelector("#about-section");
+let aboutWatcher = document.createElement('div');
+aboutWatcher.setAttribute('data-about-section-watcher','');
+aboutSection.before(aboutWatcher);
 
+const aboutObserver = new IntersectionObserver((entries)=>{
+    console.log("entries:: ",entries);
+    about.classList.toggle('span-grow', entries[0].isIntersecting);
+});
+aboutObserver.observe(aboutWatcher);
+
+let experienceSection = document.querySelector('#experience-section');
+let experienceWatcher = document.createElement('div');
+experienceWatcher.setAttribute('data-experience-wathcer','');
+experienceSection.before(experienceWatcher);
+
+const experienceObserver = new IntersectionObserver((entries)=>{
+    experience.classList.toggle('span-grow', entries[0].isIntersecting);
+})
+
+experienceObserver.observe(experienceWatcher)
+
+let projectsSection = document.querySelector('#projects-section');
+let projectsWatcher = document.createElement('div');
+projectsWatcher.setAttribute('data-project-watcher','');
+projectsSection.before(projectsWatcher);
+
+const projectsObserver = new IntersectionObserver((entries)=>{
+    projects.classList.toggle('span-grow', entries[0].isIntersecting);
+})
+
+projectsObserver.observe(projectsWatcher);
