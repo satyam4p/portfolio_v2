@@ -84,6 +84,9 @@ nav{
     position: sticky;
     top: 0;
     height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 .main-content{
     padding-bottom: 6rem;
@@ -283,4 +286,15 @@ a:hover{
 .project-list:hover{
     background: var(--transparent_background);
     cursor: pointer;
+}
+
+.social-media{
+    margin-top: 3rem;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+.social-media li{
+    margin-right: 1.5rem;
 }
