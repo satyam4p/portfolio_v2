@@ -297,4 +297,11 @@ a:hover{
 }
 .social-media li{
     margin-right: 1.5rem;
+    
+}
+.media-icons{
+    fill: var(--dark_gray);
+}
+.media-icons:hover{
+    fill: var(--gray);
 }
