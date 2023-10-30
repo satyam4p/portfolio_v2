@@ -41,7 +41,6 @@ aboutWatcher.setAttribute('data-about-section-watcher','');
 aboutSection.before(aboutWatcher);
 
 const aboutObserver = new IntersectionObserver((entries)=>{
-    console.log("entries:: ",entries);
     about.classList.toggle('span-grow', entries[0].isIntersecting);
 });
 aboutObserver.observe(aboutWatcher);
