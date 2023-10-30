@@ -331,6 +331,13 @@ h1{
         padding-right: 2em;
     }
     .header{
+        display: flex;
+        width: 100%;
+        position: relative;
+        justify-content: space-evenly;
+        height: max-content;
+    }
+    .nav{
         display: none;
     }
     .main-content{
