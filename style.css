@@ -261,9 +261,13 @@ h1{
     font-weight: normal;
     padding-bottom: 0.5rem;
     transition: all 200ms ease-in-out;
+    font-size: 0.9rem;
 }
 .resume a:hover{
     text-decoration: underline;
+    color: var(--gray);
+    text-decoration-color: #11C8A2;
+    text-underline-offset: 0.3rem;
 }
 .experience-header img{
     width: 100%;
@@ -311,10 +315,9 @@ h1{
     stroke: var(--secondary);
     transition: all 200ms ease-in-out;
     position: absolute;
-
+    padding-top: 0.3rem;
 }
+
 .resume-link:hover .arrow-icon{
     margin: 0rem 0rem 0rem 0.5rem;
-    stroke: var(--anchor);
-    
 }
