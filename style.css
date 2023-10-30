@@ -321,3 +321,19 @@ h1{
 .resume-link:hover .arrow-icon{
     margin: 0rem 0rem 0rem 0.5rem;
 }
+
+
+@media screen and (max-width:1000px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    .header{
+        display: none;
+    }
+    .main-content{
+        width: 100%;
+    }
+}
